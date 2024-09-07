@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goldent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./static/css/output.css" />
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    .nav, .mobile-nav {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    h2, h3, h4, h5, h6 {
+      font-family: 'Lato', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- navbar for medium screens and larger -->
+  <nav class="nav bg-black xl:h-28 hidden md:block">
+    <div class="flex flex-row justify-around items-center">
+      <div class="nav-links">
+        <ul class="flex flex-row">
+          <li class="m-3"><a href="#home" class="text-white">Home</a></li>
+          <li class="m-3"><a href="#services" class="text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-brand">
+        <img src="./static/img/logo.png" alt="logo" class="h-28 w-32">
+      </div>
+      <div class="nav-social">
+        <ul class="flex flex-row">
+          <li class="m-3"><a href="#services" class="text-white">Services</a></li>
+          <li class="m-3"><a href="#about" class="text-white">About</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <!-- navbar for small screens -->
+  <nav class="mobile-nav h-20 bg-black block md:hidden">
+    <div class="flex flex-row justify-between items-center">
+      <div class="nav-brand">
+        <img src="./static/img/logo.png" alt="logo" class="h-20 w-20">
+      </div>
+      <div class="nav-toggle">
+        <i id="nav-toggle" class="fa fa-bars
+          text-green-50 text-2xl
+          cursor-pointer
+          p-3"></i>
+
+        <div class="mobile-nav-links hidden">
+          <ul class="flex flex-col">
+            <li class="m-3"><a href="#home" class="text-white
+              hover:text-teal-500">Home</a></li>
+            <li class="m-3"><a href="#contact" class="text-white
+              hover:text-teal-500">Contact</a></li>
+            <li class="m-3"><a href="#services" class="text-white
+              hover:text-teal-500">Services</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- home -->
+  <section id="home" class="h-1/2 bg-[url('/static/img/jumbotron.jpg')] bg-cover bg-no-repeat bg-center">
+    <div class="jumbotron-content">
+      <h1 class="text-6xl md:text-9xl font-bold text-neutral-800 p-4">Welcome to Goldent</h1>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section name="contact" class="h-2/4 lg:h-1/4 bg-teal-700">
+    <h2 class="text-3xl p-6 text-center">Contact</h2>
+    <div class="flex flex-row flex-wrap justify-around items-center">
+      <div class="hours">
+        <i class="fa fa-clock-o fa-5x m-5"></i>
+        <h2 class="text-2xl">Hours</h2>
+        <p>Monday - Friday: 9am - 5pm</p>
+        <p>Saturday: 10am - 4pm</p>
+        <p>Sunday: Closed</p>
+      </div>
+      <div class="address">
+        <i class="fa fa-map-marker fa-5x m-5"></i>
+        <h2 class="text-2xl">Address</h2>
+        <p>1234 Goldent St.</p>
+        <p>Goldent, CA 12345</p>
+      </div>
+      <div class="phone">
+        <i class="fa fa-phone fa-5x m-5"></i>
+        <h2 class="text-2xl">Phone</h2>
+        <p>(123) 456-7890</p>
+      </div>
+      <div class="email">
+        <i class="fa fa-envelope fa-5x m-5"></i>
+        <h2 class="text-2xl">Email</h2>
+        <p>
+          <a href="mailto:email@example.com">email@example.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- services -->
+  <section class="text-center">
+    <h1>Services</h1>
+  </section>
+
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      // reveal links in mobile nav and increase height
+      document.querySelector('.mobile-nav-links').classList.toggle('hidden');
+      document.querySelector('.mobile-nav').classList.toggle('h-20');
+      document.querySelector('.mobile-nav').classList.toggle('h-56');
+    });
+  </script>
+</body>
+</html>

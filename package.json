@@ -1,0 +1,16 @@
+{
+  "name": "goldent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "css-build": "tailwindcss build -i static/css/styles.css -o static/css/output.css",
+    "css-watch": "tailwindcss build -i static/css/styles.css -o static/css/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}
