@@ -26,47 +26,44 @@
   </style>
 </head>
 <body>
+  <nav class="nav bg-black h-10 shadow-md hidden md:block">
+    <div class="container mx-auto flex justify-center items-center h-full">
+      <ul class="flex gap-9">
+        <li class="mx-2"><a href="#" class="text-slate-50 text-lg">Inicio</a></li>
+        <li class="mx-2"><a href="#" class="text-slate-50 text-lg">Tratamientos</a></li>
+        <li class="mx-2"><a href="#" class="text-slate-50 text-lg">Dra.Escudero y equipo</a></li>
+        <li class="mx-2"><a href="#" class="text-slate-50 text-lg">Novedades</a></li>
+        <li class="mx-2"><a href="tel:+51997275986" class="text-slate-50 text-lg">Contactanos</a></li>
+      </ul>
 
-  <!-- navbar for medium screens and larger -->
-  <nav class="nav bg-black xl:h-28 hidden md:block">
-    <div class="flex flex-row justify-around items-center">
-      <div class="nav-links">
-        <ul class="flex flex-row">
-          <li class="m-3"><a href="#home" class="text-white">Home</a></li>
-          <li class="m-3"><a href="#services" class="text-white">Contact</a></li>
-        </ul>
+      <div class="flex-grow"></div>
+      <div class="flex gap-2 h-full justify-center items-center">
+        <i class="fa fa-phone text-slate-50"></i>
+        <span class="text-slate-50">997275986</span>
       </div>
-      <div class="nav-brand">
-        <img src="./static/img/logo.png" alt="logo" class="h-28 w-32">
-      </div>
-      <div class="nav-social">
-        <ul class="flex flex-row">
-          <li class="m-3"><a href="#services" class="text-white">Services</a></li>
-          <li class="m-3"><a href="#about" class="text-white">About</a></li>
-        </ul>
     </div>
   </nav>
 
-  <!-- navbar for small screens -->
-  <nav class="mobile-nav h-20 bg-black block md:hidden">
+  <!-- mobile nav -->
+  <nav class="mobile-nav h-13 py-2 bg-black block md:hidden">
     <div class="flex flex-row justify-between items-center">
-      <div class="nav-brand">
-        <img src="./static/img/logo.png" alt="logo" class="h-20 w-20">
+      <div class="p-2">
+        <i class="fa fa-phone text-slate-50"></i>
+        <span class="text-slate-50">997275986</span>
       </div>
       <div class="nav-toggle">
         <i id="nav-toggle" class="fa fa-bars
-          text-green-50 text-2xl
+          text-slate-50 text-2xl
           cursor-pointer
           p-3"></i>
 
         <div class="mobile-nav-links hidden">
           <ul class="flex flex-col">
-            <li class="m-3"><a href="#home" class="text-white
-              hover:text-teal-500">Home</a></li>
-            <li class="m-3"><a href="#contact" class="text-white
-              hover:text-teal-500">Contact</a></li>
-            <li class="m-3"><a href="#services" class="text-white
-              hover:text-teal-500">Services</a></li>
+            <li class="mx-2"><a href="#" class="text-slate-50 text-lg">Inicio</a></li>
+            <li class="mx-2"><a href="#" class="text-slate-50 text-lg">Tratamientos</a></li>
+            <li class="mx-2"><a href="#" class="text-slate-50 text-lg">Dra.Escudero y equipo</a></li>
+            <li class="mx-2"><a href="#" class="text-slate-50 text-lg">Novedades</a></li>
+            <li class="mx-2"><a href="tel:+51997275986" class="text-slate-50 text-lg">Contactanos</a></li>
           </ul>
         </div>
       </div>
@@ -74,56 +71,58 @@
   </nav>
 
   <!-- home -->
-  <section id="home" class="h-1/2 bg-[url('/static/img/jumbotron.jpg')] bg-cover bg-no-repeat bg-center">
-    <div class="jumbotron-content">
-      <h1 class="text-6xl md:text-9xl font-bold text-neutral-800 p-4">Welcome to Goldent</h1>
+  <section id="jumbotron" class="w-full h-3/5">
+    <img src="/static/img/jumbotron.png" alt="Goldent" class="w-full h-full object-cover" />
+  </section>
+
+  <section id="action" class="p-4 lg:p-16 bg-slate-300">
+    <div class="container mx-auto flex flex-col justify-center items-center gap-5">
+      <h1 class="text-3xl text-center">¿Quieres una sonrisa perfecta?</h1>
+      <p class="text-center text-lg">Con más de 10 años de experiencia, en Goldent creamos la sonrisa perfecta para ti. ¡Agenda tu cita y descubre la diferencia!</p>
+      <a class="btn bg-black text-slate-50 m-4 p-6 rounded-md" href="tel:+51997275986">Agendar cita</a>
     </div>
   </section>
 
-  <!-- contact -->
-  <section name="contact" class="h-2/4 lg:h-1/4 bg-teal-700">
-    <h2 class="text-3xl p-6 text-center">Contact</h2>
-    <div class="flex flex-row flex-wrap justify-around items-center">
-      <div class="hours">
-        <i class="fa fa-clock-o fa-5x m-5"></i>
-        <h2 class="text-2xl">Hours</h2>
-        <p>Monday - Friday: 9am - 5pm</p>
-        <p>Saturday: 10am - 4pm</p>
-        <p>Sunday: Closed</p>
+  <section id="tratamientos" class="p-4 bg-slate-300">
+    <div class="grid gap-x-4 gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div class="border border-gray-300 m-4 text-center p-4 rounded-md flex flex-col gap-3 justify-center items-center bg-black">
+        <h1 class="text-2xl text-yellow-300">Endodoncia</h1>
+        <img class="h-12 w-12" src="./static/img/tratamientos/endodoncia.png" />
+        <p class="text-white">Ofrecemos un tratamiento sin dolor, rápido y seguro para las raíces dentales, con la extracción completa del nervio, garantizando tu comodidad y bienestar.</p>
       </div>
-      <div class="address">
-        <i class="fa fa-map-marker fa-5x m-5"></i>
-        <h2 class="text-2xl">Address</h2>
-        <p>1234 Goldent St.</p>
-        <p>Goldent, CA 12345</p>
+      <div class="border border-gray-300 m-4 text-center p-4 rounded-md flex flex-col gap-3 justify-center items-center bg-black">
+        <h1 class="text-2xl text-yellow-300">Ortodoncia</h1>
+        <img class="h-12 w-12" src="./static/img/tratamientos/endodoncia.png" /<>
+        <p class="text-white">¿Te molestan los dientes desalineados? Nuestra especialidad en ortodoncia está diseñada para corregir la posición de tus dientes, brindándote una sonrisa alineada y saludable. ¡Empieza hoy tu transformación!</p>
       </div>
-      <div class="phone">
-        <i class="fa fa-phone fa-5x m-5"></i>
-        <h2 class="text-2xl">Phone</h2>
-        <p>(123) 456-7890</p>
+      <div class="border border-gray-300 m-4 text-center p-4 rounded-md flex flex-col gap-3 justify-center items-center bg-black">
+        <h1 class="text-2xl text-yellow-300">Estética dental</h1>
+        <img class="h-12 w-12" src="./static/img/tratamientos/estetica.png" />
+        <p class="text-white">Haz brillar tu sonrisa como nunca antes! Recupera tu confianza con nuestros innovadores tratamientos: Blanqueamiento LED, Carillas, Coronas libres de metal y mucho más. </p>
       </div>
-      <div class="email">
-        <i class="fa fa-envelope fa-5x m-5"></i>
-        <h2 class="text-2xl">Email</h2>
-        <p>
-          <a href="mailto:email@example.com">email@example.com</a>
-        </p>
+      <div class="border border-gray-300 m-4 text-center p-4 rounded-md flex flex-col gap-3 justify-center items-center bg-black">
+        <h1 class="text-2xl text-yellow-300">Implantes dentales</h1>
+        <img class="h-12 w-12" src="./static/img/tratamientos/implantes.png" />
+        <p class="text-white">Especialidad dedicada a recuperar la función masticatoria y restaurar dientes perdidos a través de prótesis fijas, removibles e implantes, brindando soluciones eficaces para una sonrisa completa y funcional.</p>
+      </div>
+      <div class="border border-gray-300 m-4 text-center p-4 rounded-md flex flex-col gap-3 justify-center items-center bg-black">
+        <h1 class="text-2xl text-yellow-300">Rehabilitación oral completa</h1>
+        <img class="h-12 w-12" src="./static/img/tratamientos/rehabilitacion.png" />
+        <p class="text-white">Obtén una solución integral para problemas dentales extensos con nuestra rehabilitación oral completa. Combinamos varios tratamientos para restaurar la funcionalidad, la estética y la salud de tu boca, ofreciendo un enfoque personalizado y completo.</p>
+      </div>
+      <div class="border border-gray-300 m-4 text-center p-4 rounded-md flex flex-col gap-3 justify-center items-center bg-black">
+        <h1 class="text-2xl text-yellow-300">Odontropediatría</h1>
+        <img class="h-12 w-12" src="./static/img/tratamientos/odontropediatria.png" />
+        <p class="text-white">Nos dedicamos a la prevención del cuidado oral infantil a través de métodos personalizados que promueven la responsabilidad y el entusiasmo en los niños, ayudándolos a desarrollar hábitos saludables y duraderos.</p>
       </div>
     </div>
   </section>
-
-  <!-- services -->
-  <section class="text-center">
-    <h1>Services</h1>
-  </section>
-
-
   <script>
-    document.getElementById('nav-toggle').addEventListener('click', function() {
-      // reveal links in mobile nav and increase height
-      document.querySelector('.mobile-nav-links').classList.toggle('hidden');
-      document.querySelector('.mobile-nav').classList.toggle('h-20');
-      document.querySelector('.mobile-nav').classList.toggle('h-56');
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileNavLinks = document.querySelector('.mobile-nav-links');
+
+    navToggle.addEventListener('click', () => {
+      mobileNavLinks.classList.toggle('hidden');
     });
   </script>
 </body>
